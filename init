@@ -1,4 +1,14 @@
 #!/usr/bin/bash
 
+OP=`pwd`
+echo === chg into /root  ===
+cd /root/
+mv test test.bak 2>/dev/null
+echo === clone test repo  ===
 git clone git@github.com:lhcao/test.git
 cd test
+git branch -va
+
+echo === current dir: `pwd` ===
+echo === back into old dir ===
+cd $OP
